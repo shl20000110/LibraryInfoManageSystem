@@ -21,8 +21,7 @@ public class BookDaoImpl {
         bookDao = new BookDaoImpl();
     }
 
-    private BookDaoImpl() {
-    }
+    private BookDaoImpl() { }
 
     public static BookDaoImpl getInstance() {
         return bookDao;
@@ -38,7 +37,7 @@ public class BookDaoImpl {
      * @param address 地址
      * @return 成功添加返回true否则返回false
      */
-    public boolean insertBook(String name, double price, int count, String type, String author, String address) throws Exception {
+    public boolean insertBook(String name, double price, int count, String type, String author, String address) {
 
         String sql = "insert into " +
                 "book(name, price, count, type, author, discount, hasLended, address)" +
@@ -55,8 +54,11 @@ public class BookDaoImpl {
             psts.setObject(6, 0);
             psts.setObject(7, 0);
             psts.setObject(8, address);
+            //打印SQL语句到屏幕上
+            System.out.println(sql);
             //执行,返回值为int
             return psts.executeUpdate() > 0;
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -101,6 +103,8 @@ public class BookDaoImpl {
                 Book book = new Book(id, name, price, count, type, author, discount, hasLended, address);
                 list.add(book);
             }
+            //打印SQL语句到屏幕上
+            System.out.println(sql);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -132,6 +136,8 @@ public class BookDaoImpl {
             if (res > 0) {
                 return true;
             }
+            //打印SQL语句到屏幕上
+            System.out.println(sql);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -240,6 +246,8 @@ public class BookDaoImpl {
                 book.setHasLended(rs.getInt("hasLended"));
                 book.setAddress(rs.getString("address"));
             }
+            //打印SQL语句到屏幕上
+            System.out.println(sql);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -279,6 +287,8 @@ public class BookDaoImpl {
             book.setDiscount(rs.getInt("discount"));
             book.setHasLended(rs.getInt("hasLended"));
             book.setAddress(rs.getString("address"));
+            //打印SQL语句到屏幕上
+            System.out.println(sql);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

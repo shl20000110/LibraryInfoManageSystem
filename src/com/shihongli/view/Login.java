@@ -33,8 +33,8 @@ public class Login implements ActionListener, FocusListener {
     private Dimension sc = toolkit.getScreenSize();
     //标题
     private JLabel title = new JLabel("欢迎使用图书信息管理系统");
-    private JLabel name1 = new JLabel("用户名");
-    private JLabel pass1 = new JLabel("密  码");
+    private JLabel name = new JLabel("用户名");
+    private JLabel password = new JLabel("密  码");
     //用户名输入框与提示
     private JTextField textName = new JTextField();
     private String hintText1 = "用户账号/学号";
@@ -71,8 +71,8 @@ public class Login implements ActionListener, FocusListener {
         con.setVisible(true);
         //设置组件位置
         title.setBounds(250, 80, 380, 30);
-        name1.setBounds(285, 140, 100, 30);
-        pass1.setBounds(285, 190, 100, 30);
+        name.setBounds(285, 140, 100, 30);
+        password.setBounds(285, 190, 100, 30);
         textName.setBounds(400, 143, 160, 25);
         textPs.setBounds(400, 193, 160, 25);
         choice1.setBounds(330, 290, 140, 25);
@@ -84,8 +84,8 @@ public class Login implements ActionListener, FocusListener {
         button2.setBounds(450, 360, 120, 25);
         //字体样式设置
         title.setFont(font);
-        name1.setFont(font1);
-        pass1.setFont(font1);
+        name.setFont(font1);
+        password.setFont(font1);
         textName.setFont(font1);
         textPs.setFont(font1);
         code1.setFont(font1);
@@ -94,8 +94,8 @@ public class Login implements ActionListener, FocusListener {
         button1.setFont(font2);
         button2.setFont(font2);
         title.setForeground(Color.black);
-        name1.setForeground(Color.black);
-        pass1.setForeground(Color.black);
+        name.setForeground(Color.black);
+        password.setForeground(Color.black);
         code1.setForeground(Color.black);
         code2.setForeground(Color.black);
         textName.setForeground(Color.GRAY);
@@ -104,8 +104,8 @@ public class Login implements ActionListener, FocusListener {
         textName.setText(hintText1);
         textPs.setText(hintText2);
         //鼠标悬浮提示
-        name1.setToolTipText("请输入用户账号/学号");
-        pass1.setToolTipText("请输入用户密码");
+        name.setToolTipText("请输入用户账号/学号");
+        password.setToolTipText("请输入用户密码");
         code1.setToolTipText("请输入验证码");
         //设置小图标，调用自定义方法
         ImageIcon icon1 = CreateImageUtils.CreateImageIcon("user.png");
@@ -113,8 +113,8 @@ public class Login implements ActionListener, FocusListener {
         ImageIcon icon3 = CreateImageUtils.CreateImageIcon("book.png");
         ImageIcon icon4 = CreateImageUtils.CreateImageIcon("login.png");
         ImageIcon icon5 = CreateImageUtils.CreateImageIcon("signup.png");
-        name1.setIcon(icon1);
-        pass1.setIcon(icon2);
+        name.setIcon(icon1);
+        password.setIcon(icon2);
         code1.setIcon(icon3);
         button1.setIcon(icon4);
         button2.setIcon(icon5);
@@ -144,8 +144,8 @@ public class Login implements ActionListener, FocusListener {
         JLabel backGroundImage = new BackGroundImagesUtils().setBackGroundImage(jf, "bg2.jpg");
         //配件加入面板
         con.add(title);
-        con.add(name1);
-        con.add(pass1);
+        con.add(name);
+        con.add(password);
         con.add(textName);
         con.add(textPs);
         con.add(choice1);

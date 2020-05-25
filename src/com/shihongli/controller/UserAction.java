@@ -39,7 +39,7 @@ public class UserAction {
      * @param password 密码
      * @return 注册成功返回true，否则返回false
      */
-    public boolean addUser(int id, String name, String password) throws Exception {
+    public boolean addUser(int id, String name, String password) {
         User user = new User(id, name, password);
         if (userDao.insertUser(user)) {
             ShowMessageUtils.winMessage("注册成功！");

@@ -7,7 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DateUtils {
-
     public static String getDate() {
         Date date = new Date();
         // 将英文时间转为指定格式

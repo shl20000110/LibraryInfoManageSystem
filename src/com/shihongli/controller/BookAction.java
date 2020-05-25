@@ -57,7 +57,7 @@ public class BookAction {
         //借出的数量加1
         bk.setHasLended(bk.getHasLended() + 1);
         //借出书的次数加1
-        bk.setDiscount(bk.getDiscount());
+        bk.setDiscount(bk.getDiscount() + 1);
         //获取连接
         Connection conn = JDBCUtils.getConnection();
         try {
@@ -238,7 +238,7 @@ public class BookAction {
      * @param address 藏书地点
      * @return
      */
-    public boolean insertBook(String name, double price, int count, String type, String author, String address) throws Exception {
+    public boolean insertBook(String name, double price, int count, String type, String author, String address) {
         if (bookDao.searchBook(name).getId() > 0) {
             return false;
         }

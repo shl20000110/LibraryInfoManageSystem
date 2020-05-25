@@ -50,7 +50,7 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
     //用户管理页面组件
     private JLabel id = new JLabel("用户名");
     private JTextField textId = new JTextField();
-    private JButton btnSchU = new JButton("搜  索");
+    private JButton btnSearch = new JButton("搜  索");
     private JButton btnDelU = new JButton("删除该用户");
     private JPasswordField textNewpassword = new JPasswordField();
     private JButton newpassword = new JButton("修改密码");
@@ -63,7 +63,7 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
     private JPasswordField textUpassword = new JPasswordField();
     private JButton btnNewUser = new JButton("确定");
     //图书管理页面配件
-    private JLabel bookname = new JLabel("书 名");
+    private JLabel btnName = new JLabel("书 名");
     private JLabel price5 = new JLabel("价 格");
     private JLabel count5 = new JLabel("数 量");
     private JLabel type5 = new JLabel("类 型");
@@ -77,8 +77,8 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
     private JTextField address_5 = new JTextField();
     private JButton btnUpdate5 = new JButton("修 改");
     private JButton button5 = new JButton("添 加");
-    private JButton btnSchB = new JButton("搜 索");
-    private JButton btnDelB = new JButton("删 除");
+    private JButton btnSearchB = new JButton("搜 索");
+    private JButton btnDeleteB = new JButton("删 除");
     private JButton lendBtn = new JButton("借 书");
     private JButton returnBtn = new JButton("还 书");
     //查看所有图书页面
@@ -93,7 +93,7 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
     private Font font1 = new Font("微软雅黑", 0, 16);
     private JTabbedPane tabbedPane;
     private JButton reFresh = new JButton("刷新");
-    private JButton btnexit = new JButton("退出");
+    private JButton btnExit = new JButton("退出");
     private JMenuBar menuBar = new JMenuBar();
     
     /**
@@ -120,15 +120,15 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
         //修改用户密码
         newpassword.addActionListener(this);
         //查找用户
-        btnSchU.addActionListener(this);
+        btnSearch.addActionListener(this);
         //删除用户
         btnDelU.addActionListener(this);
         //确定按钮（用户）
         btnNewUser.addActionListener(this);
         //删除图书
-        btnDelB.addActionListener(this);
+        btnDeleteB.addActionListener(this);
         //查找图书
-        btnSchB.addActionListener(this);
+        btnSearchB.addActionListener(this);
         //添加图书
         button5.addActionListener(this);
         //更新图书信息
@@ -149,10 +149,10 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
         tabbedPane.setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
         tabbedPane.addChangeListener(this);
         reFresh.addActionListener(this);
-        btnexit.addActionListener(this);
+        btnExit.addActionListener(this);
         this.setJMenuBar(menuBar);
         menuBar.add(reFresh);
-        menuBar.add(btnexit);
+        menuBar.add(btnExit);
         getContentPane().add(tabbedPane);
     }
 
@@ -179,7 +179,7 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
         
         id.setBounds(200, 150, 90, 30);
         textId.setBounds(300, 150, 200, 30);
-        btnSchU.setBounds(570, 150, 150, 30);
+        btnSearch.setBounds(570, 150, 150, 30);
         btnDelU.setBounds(170, 300, 150, 30);
         newpassword.setBounds(370, 300, 150, 30);
         textNewpassword.setBounds(570, 300, 170, 30);
@@ -187,7 +187,7 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
         card2.setFont(font);
         id.setFont(font);
         textId.setFont(font);
-        btnSchU.setFont(font1);
+        btnSearch.setFont(font1);
         btnDelU.setFont(font1);
         newpassword.setFont(font1);
         textNewpassword.setFont(font);
@@ -196,7 +196,7 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
         card2.add(textId);
         card2.add(id);
         card2.add(btnDelU);
-        card2.add(btnSchU);
+        card2.add(btnSearch);
         card2.add(newpassword);
         card2.add(textNewpassword);
         //设置水平垂直对齐
@@ -252,10 +252,10 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
 
     private void initCard5() {
         // 查找书籍，删除书籍，修改书籍信息
-        bookname.setBounds(150, 40, 80, 30);
+        btnName.setBounds(150, 40, 80, 30);
         textName.setBounds(230, 40, 200, 30);
-        btnSchB.setBounds(450, 40, 100, 30);
-        btnDelB.setBounds(350, 350, 90, 30);
+        btnSearchB.setBounds(450, 40, 100, 30);
+        btnDeleteB.setBounds(350, 350, 90, 30);
         lendBtn.setBounds(450, 350, 90, 30);
         returnBtn.setBounds(550, 350, 90, 30);
         price5.setBounds(150, 80, 80, 30);
@@ -271,10 +271,10 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
         button5.setBounds(250, 350, 90, 30);
         btnUpdate5.setBounds(150, 350, 90, 30);
         
-        bookname.setFont(font);
+        btnName.setFont(font);
         textName.setFont(font);
-        btnSchB.setFont(font);
-        btnDelB.setFont(font);
+        btnSearchB.setFont(font);
+        btnDeleteB.setFont(font);
         lendBtn.setFont(font);
         returnBtn.setFont(font);
         count5.setFont(font);
@@ -290,10 +290,10 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
         button5.setFont(font);
         btnUpdate5.setFont(font);
         
-        card5.add(bookname);
+        card5.add(btnName);
         card5.add(textName);
-        card5.add(btnSchB);
-        card5.add(btnDelB);
+        card5.add(btnSearchB);
+        card5.add(btnDeleteB);
         card5.add(lendBtn);
         card5.add(returnBtn);
         card5.add(price5);
@@ -336,7 +336,7 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         //查找用户按钮
-        if (e.getSource() == this.btnSchU) {
+        if (e.getSource() == this.btnSearch) {
             String id = textId.getText();
             if (id.equals("")) {
                 ShowMessageUtils.winMessage("未输入账号！");
@@ -413,7 +413,7 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
             }
         }
         //查找图书
-        else if (e.getSource() == this.btnSchB) {
+        else if (e.getSource() == this.btnSearchB) {
             //获取书名
             String name = textName.getText();
             if (name.equals("")) {
@@ -434,7 +434,7 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
             }
         }
         //删除图书
-        else if (e.getSource() == this.btnDelB) {
+        else if (e.getSource() == this.btnDeleteB) {
             if (this.bName == null) {
                 ShowMessageUtils.winMessage("请先查找一本书！");
             } else {
@@ -566,7 +566,7 @@ public class AdminUi extends JFrame implements ActionListener, ChangeListener {
             this.dispose();
         }
         //退出登录按钮
-        else if (e.getSource() == this.btnexit) {
+        else if (e.getSource() == this.btnExit) {
             //返回首页
             new Index();
             //销毁当前页面
