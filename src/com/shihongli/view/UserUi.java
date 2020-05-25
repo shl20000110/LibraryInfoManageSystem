@@ -168,13 +168,13 @@ public class UserUi extends JFrame implements ActionListener, ChangeListener {
         //传入记录数据与表头
         JTable recordTable = new JTable(recordDao.getRecordsByUid(uId), recordTableHead);
         recordTable.setFont(font);
-        recordTable.setPreferredSize(new Dimension(880, 460));
+        recordTable.setPreferredSize(new Dimension(880, 600));
         recordTable.getTableHeader().setPreferredSize(new Dimension(0, 30));
         recordTable.getTableHeader().setFont(font1);
         recordTable.setRowHeight(30);
         recordTable.setEnabled(false);
         JScrollPane scroll = new JScrollPane(recordTable);
-        scroll.setPreferredSize(new Dimension(880, 430));
+        scroll.setPreferredSize(new Dimension(880, 600));
         card3.removeAll();
         card3.add(scroll);
     }
