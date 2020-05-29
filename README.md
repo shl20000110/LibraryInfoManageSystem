@@ -4,8 +4,7 @@
 
 1.管理员默认用户名与密码均为123
 2.登录页面：
-![]（文档：图片1.png
-链接：http://note.youdao.com/noteshare?id=8405a23abb32d17539f7ce1d411a432a）
+![](http://note.youdao.com/noteshare?id=8405a23abb32d17539f7ce1d411a432a)
 3.注册页面
 ![](http://note.youdao.com/noteshare?id=4e0dc0050c742486cb3d9df4907f040a)
 4.用户页面
