@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LibraryInfoManageSystem:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LibraryInfoManageSystem_jar</output-path>
+    <root id="archive" name="LibraryInfoManageSystem.jar">
+      <element id="module-output" name="LibraryInfoManageSystem" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/mysql-connector-java-8.0.13.jar" path-in-jar="/" />
+      <element id="library" level="project" name="mysql-connector-java-8.0.13" />
+    </root>
+  </artifact>
+</component>
